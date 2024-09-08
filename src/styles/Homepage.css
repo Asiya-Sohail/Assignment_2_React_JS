@@ -1,0 +1,91 @@
+html {
+    scroll-behavior: smooth;
+}
+
+.head {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+.body{
+    width: 100%;
+}
+.hi, .name, .profession, .cont, .cv {
+    position: relative;
+    top: -100px; /* Start the header above the visible area */
+    opacity: 0;  /* Make it invisible initially */
+    animation: slideDown 1.5s ease-out forwards;
+}
+.container {
+    margin: -40px 120px;
+}
+.container .hi {
+    color: #FF79B0;
+    font: 20px Mono;
+    margin: 0px 0 0 8px;
+
+}
+.container .name {
+    color: #ccd6f6;
+    font: 80px Calibri;
+    margin: 0px ;
+}
+.container .profession {
+    color: #8892b0;
+    font: 50px Calibri;
+    margin: -5px 0;
+}
+.container .cont {
+    max-width: 60%;
+    color: #8892b0;
+    font: 18px Calibre;
+    padding: 8px 0;
+    margin: 5px 0 0;
+}
+.cv {
+    max-width: 180px;
+    font: 16px Mono;
+    padding: 20px 20px;
+    margin: 15px 0;
+    border: 2px solid #FF79B0;
+    border-radius: 5px;
+    color: #FF79B0;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+  
+.cv:hover {
+  background-color: rgba(255, 121, 176, 0.2);
+}
+
+#about {
+    position: relative;
+    top: -100px; /* Start the header above the visible area */
+    opacity: 0;  /* Make it invisible initially */
+    animation: slideDown 1.8s ease-out forwards;
+}
+
+#experience {
+    position: relative;
+    top: -100px; /* Start the header above the visible area */
+    opacity: 0;  /* Make it invisible initially */
+    animation: slideDown 2s ease-out forwards;
+}
+
+#contact {
+    position: relative;
+    top: -100px; /* Start the header above the visible area */
+    opacity: 0;  /* Make it invisible initially */
+    animation: slideDown 2.3s ease-out forwards;
+}
+
+@keyframes slideDown {
+    0% {
+      top: -100px;
+      opacity: 0;
+    }
+    100% {
+      top: 0;
+      opacity: 1;
+    }
+  }

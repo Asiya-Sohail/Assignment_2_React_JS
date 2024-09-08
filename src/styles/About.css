@@ -1,0 +1,41 @@
+.about-cont {
+    margin: 20px 0;
+}
+
+.heading h2 {
+    font-size: 30px;
+    color:antiquewhite;
+}
+
+.content {
+    color: #ccd6f6;
+    font-size: 18px;
+    margin: 20px 0;
+    padding : 0 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.text-content  {
+    max-width: 50%;
+}
+
+.img-content img {
+    max-height: 400px;
+    padding: 20px;
+    border: 2px solid #FF6FCF;
+
+}
+
+.text-content p {
+    margin: 20px 0;
+}
+
+.list {
+    float: left;
+}
+.text-content ul {
+    list-style: none;
+    display: block;
+}

@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    margin: 0 0 20px 16px;
+    background-color: transparent;
+    color: #fff;
+    position: relative;
+    top: -100px; /* Start the header above the visible area */
+    opacity: 0;  /* Make it invisible initially */
+    animation: slideDown 1s ease-out forwards;
+  }
+  
+  .logo img {
+    max-width: 65px;
+    max-height: 80px;
+  }
+  
+  .list {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  
+  div ul {
+    display: flex;
+    justify-content: right;
+    list-style-type: none;
+    margin-right: 15px;
+  }
+  
+  div ul li {
+    margin: 0 10px 0 0;
+    padding: 10px;
+  }
+  
+  div ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 5px;
+    transition: color 0.3s;
+  }
+  
+  div ul li a:hover {
+    color: #FF79B0;
+  }
+  #cv {
+    max-width: 100px;
+    font-size: 16px;
+    font-weight: 5px;
+    margin: 10px 10px ;
+    padding: 10px 30px;
+    border: 2px solid #FF79B0;
+    border-radius: 5px;
+    color: #FF79B0;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  #cv:hover {
+    background-color: rgba(255, 121, 176, 0.2);
+  }
+  
+  @media (max-width: 768px) {
+    .header {
+      flex-direction: column;
+    }
+  
+    div ul {
+      flex-direction: column;
+      margin-top: 10px;
+    }
+  
+    #cv {
+      margin-top: 10px;
+    }
+  }
+  
+  @keyframes slideDown {
+    0% {
+      top: -100px;
+      opacity: 0;
+    }
+    100% {
+      top: 0;
+      opacity: 1;
+    }
+  }

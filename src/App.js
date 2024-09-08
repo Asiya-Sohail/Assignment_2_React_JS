@@ -1,24 +1,35 @@
-import logo from './logo.svg';
+import logo from './assets/logo.png'
 import './App.css';
+import Homepage from './pages/Homepage';
+import { useState, useEffect } from 'react';
 
 function App() {
-  return (
+  const [showAnimation, setShowAnimation] = useState(true);
+
+  useEffect(() => {
+    // Set a timer to hide the animation after 3 seconds (adjust as needed)
+    const timer = setTimeout(() => {
+      setShowAnimation(false);
+    }, 3000);
+
+    // Cleanup the timer when component unmounts
+    return () => clearTimeout(timer);
+  }, []);
+
+  return (      
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      {showAnimation && (
+        <div className="logo-animation">
+          <img src={logo} alt="logo" />
+        </div>
+      )}
+      {!showAnimation && (
+        <div className="content">
+          <Homepage />
+        </div>
+      )}
+  </div>
+    
   );
 }
 
